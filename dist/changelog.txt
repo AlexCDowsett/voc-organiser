@@ -1,0 +1,6 @@
+V1.0
+ - Release
+
+V1.1
+ - Fixed bug causing experiment name <number> variable being one number larger than intended.
+ - Fixed bug causing <date> and <time> variables to be of first repeats values instead of individual repeats values.
