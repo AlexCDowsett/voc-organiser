@@ -1,4 +1,4 @@
-# VOC File Organiser
+# VOC File Organiser 🧬🗂️
 
 A GUI application designed to organize and restructure raw Volatile Organic Compound (VOC) sensor data files from the analyzer. This tool helps researchers and technicians efficiently manage their sensor data by automatically organizing files into structured folders based on test repeats.
 
