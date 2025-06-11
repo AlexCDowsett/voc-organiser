@@ -10,7 +10,7 @@ HELP 	= ['\nThis software is designed to organise sensory data files into sepera
 		   '\n\u2022 The destination folder is where the the organised files are exported.',
 		   "\n\u2022 The 'Rename test name' box can be used to change a file's name or\n   experiment's name. The following text substitutions can be used:\n   '<number>', '<time>', <date>' which will be substitued appropriately\n   depending on the data within the particular text file.",
 		   "\n    - If you wish to keep the original file name untick the 'Apply name change to\n       file name' checkbox.",
-		   "    - If you wish to keep the original experiment name untick the 'Apply name\n       change to experiment name' checkbox.",
+		   "    - If you wish to keep the original experiment name5 untick the 'Apply name\n       change to experiment name' checkbox.",
 		   "\n\u2022 If you wish to compress the output folder as a .zip file tick the 'Compress\n    output folder' checkbox.\n"
 		]
 
@@ -189,7 +189,7 @@ class Window(QtWidgets.QMainWindow):
         self.font4.setPointSize(7)
 
         self.verL = QtWidgets.QLabel("Version: "+str(VERSION), self)
-        self.verL.setGeometry(QtCore.QRect(275, 467, 50, 20))
+        self.verL.setGeometry(QtCore.QRect(300, 0, 50, 20))
         self.verL.setStatusTip('Software Version.')
         self.verL.setFont(self.font4)
 
@@ -213,11 +213,13 @@ class Window(QtWidgets.QMainWindow):
 
     def checkbox(self):
         if self.changeFileNameC.isChecked() or self.changeExperimentNameC.isChecked():
-        	self.changeNameE.setStyleSheet("color: black;")
-        	self.changeNameE.setReadOnly(False)
+            # Use system default text color when enabled
+            self.changeNameE.setStyleSheet("")
+            self.changeNameE.setReadOnly(False)
         else:
-        	self.changeNameE.setStyleSheet("color: gray;")
-        	self.changeNameE.setReadOnly(True)
+            # Use system default disabled text color when disabled
+            self.changeNameE.setStyleSheet("color: gray;")
+            self.changeNameE.setReadOnly(True)
 
 
     def confirm(self):
