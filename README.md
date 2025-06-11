@@ -71,7 +71,3 @@ Current version: 1.1
 ## Author
 
 Created by Alex Dowsett, University of Surrey
-
-## License
-
-[Add your license information here] 
